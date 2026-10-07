@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.jsx';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    /* Law Firm Color Palette — adapted from bint.co.zw */
+    /* Navy: primary dark brand color */
+    --color-navy-900: #0a1129;
+    --color-navy-800: #131f4a;
+    --color-navy-700: #1a2a5c;
+    --color-navy-600: #2563eb;
+    --color-navy-500: #3b82f6;
+
+    /* Gold (accent): blue accent palette from bint.co.zw */
+    --color-gold-500: #2563eb;
+    --color-gold-400: #3b82f6;
+    --color-gold-300: #60a5fa;
+    --color-gold-200: #dbeafe;
+    --color-gold-100: #eff6ff;
+    --color-gold-600: #1d4ed8;
+    --color-gold-700: #1e40af;
+
+    /* Warm: background and text palette from bint.co.zw */
+    --color-warm-50: #fdfdfc;
+    --color-warm-100: #f8fafc;
+    --color-warm-200: #f1f5f9;
+    --color-warm-300: #e2e8f0;
+    --color-warm-400: #cbd5e1;
+    --color-warm-500: #94a3b8;
+    --color-warm-600: #64748b;
+    --color-warm-700: #475569;
+    --color-warm-800: #334159;
+    --color-warm-900: #0f172a;
+}
