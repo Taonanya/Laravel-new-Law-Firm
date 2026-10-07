@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
                 <div className="text-center max-w-4xl mx-auto">
                     {/* Badge */}
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-sm font-medium mb-8" role="status">
+                    <div data-reveal="up" style={{ '--reveal-delay': '0ms' }} className="inline-flex items-center px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-sm font-medium mb-8" role="status">
                         <span className="mr-2" aria-hidden="true">⚖</span>
                         Trusted Legal Counsel Since 1987
                     </div>
@@ -32,6 +32,8 @@ export default function Hero() {
                     {/* Main Headline */}
                     <h1
                         id="hero-heading"
+                        data-reveal="up"
+                        style={{ '--reveal-delay': '100ms' }}
                         className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 tracking-tight"
                     >
                         Resolute Advocacy.
@@ -40,14 +42,14 @@ export default function Hero() {
                     </h1>
 
                     {/* Subheadline */}
-                    <p className="text-lg sm:text-xl lg:text-2xl text-warm-200 leading-relaxed mb-10 max-w-3xl mx-auto">
+                    <p data-reveal="up" style={{ '--reveal-delay': '180ms' }} className="text-lg sm:text-xl lg:text-2xl text-warm-200 leading-relaxed mb-10 max-w-3xl mx-auto">
                         For over three decades, Magweta neVamwe has guided clients through
                         their most complex legal challenges with precision, integrity, and an 
                         unwavering commitment to excellence.
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <div data-reveal="up" style={{ '--reveal-delay': '260ms' }} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <Link
                             href={route('contact')}
                             className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gold-500 text-white text-base font-semibold rounded-lg hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-900"
@@ -66,7 +68,7 @@ export default function Hero() {
                     </div>
 
                     {/* Trust Indicators */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+                    <div data-reveal="up" style={{ '--reveal-delay': '340ms' }} className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
                         <div className="border-l border-gold-500/30 pl-6 md:pl-8">
                             <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gold-400 mb-1">37+</div>
                             <div className="text-warm-300 text-sm sm:text-base">Years Experience</div>

@@ -34,7 +34,7 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="py-20 lg:py-32 bg-navy-900 text-warm-100" aria-labelledby="contact-heading">
+        <section id="contact" data-reveal="up" className="py-20 lg:py-32 bg-navy-900 text-warm-100" aria-labelledby="contact-heading">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">

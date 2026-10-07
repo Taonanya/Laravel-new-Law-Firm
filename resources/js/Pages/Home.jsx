@@ -77,7 +77,7 @@ export default function Home() {
                 <Hero />
                 
                 {/* Quick Navigation Section */}
-                <section className="py-20 lg:py-32 bg-warm-50" aria-labelledby="quick-nav-heading">
+                <section data-reveal="up" className="py-20 lg:py-32 bg-warm-50" aria-labelledby="quick-nav-heading">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                             <span className="inline-block px-4 py-1.5 rounded-full bg-gold-100 text-gold-600 text-sm font-medium mb-4">
@@ -92,11 +92,13 @@ export default function Home() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                            {quickLinks.map((link) => (
+                            {quickLinks.map((link, index) => (
                                 <Link
                                     key={link.name}
                                     href={route(link.route)}
-                                    className="group relative bg-white rounded-2xl p-8 border border-warm-200 hover:border-gold-300 hover:shadow-xl hover:shadow-gold-100/50 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
+                                    data-reveal="up"
+                                    style={{ '--reveal-delay': `${index * 80}ms` }}
+                                    className="group relative bg-white rounded-2xl p-8 border border-warm-200 hover:border-gold-300 hover:shadow-xl hover:shadow-gold-100/50 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2"
                                 >
                                     {/* Icon */}
                                     <div className="w-14 h-14 rounded-xl bg-gold-50 flex items-center justify-center text-gold-600 mb-6 group-hover:bg-gold-100 group-hover:text-gold-700 transition-colors duration-300">

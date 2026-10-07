@@ -50,7 +50,7 @@ const steps = [
 
 export default function Process() {
     return (
-        <section id="process" className="py-20 lg:py-32 bg-white" aria-labelledby="process-heading">
+        <section id="process" data-reveal="up" className="py-20 lg:py-32 bg-white" aria-labelledby="process-heading">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
