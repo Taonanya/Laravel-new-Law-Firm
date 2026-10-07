@@ -1,6 +1,6 @@
 # Law Firm Website
 
-A responsive law firm website built with Laravel, Inertia.js, and React. It includes pages for the firm, attorneys, practice areas, client process, testimonials, and contact information.
+A responsive law firm website built with Laravel, Inertia.js, React and tailwind. It includes pages for the firm, attorneys, practice areas, client process, testimonials, and contact information.
 
 ## Technology stack
 
