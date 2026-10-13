@@ -1,4 +1,4 @@
-import { Link } from '@inertiajs/react';
+import { Link, usePage } from '@inertiajs/react';
 import { useState, useEffect } from 'react';
 import { route } from 'ziggy-js';
 
@@ -14,6 +14,8 @@ const navigation = [
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { url } = usePage();
+    const hasLightBackground = isScrolled || url.split('?')[0] !== '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,7 +28,7 @@ export default function Header() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled
+                hasLightBackground
                     ? 'bg-white/95 backdrop-blur-sm shadow-md border-b border-warm-200'
                     : 'bg-transparent'
             }`}
@@ -58,7 +60,7 @@ export default function Header() {
                                 <path d="M4 27c.8 3.4 3 5 6 5s5.2-1.6 6-5m16 0c.8 3.4 3 5 6 5s5.2-1.6 6-5M21 8a3 3 0 1 1 6 0" />
                             </svg>
                             <span className="hidden text-lg font-bold tracking-tight text-[#14213d] sm:block lg:text-xl">
-                                <span style={{ color: isScrolled ? '#14213d' : '#ffffff' }}>Magweta neVamwe</span>
+                                <span style={{ color: hasLightBackground ? '#14213d' : '#ffffff' }}>Magweta neVamwe</span>
                             </span>
                         </Link>
                     </div>
@@ -70,7 +72,7 @@ export default function Header() {
                                 <Link
                                     key={item.name}
                                     href={route(item.route)}
-                                    className={`relative px-3.5 py-2.5 text-sm font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a951] focus-visible:ring-offset-2 after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#c8a951] after:transition-transform after:duration-200 hover:after:scale-x-100 ${isScrolled ? 'text-[#17243a] hover:text-[#9b7728]' : 'text-white hover:text-[#e6c76b]'}`}
+                                    className={`relative px-3.5 py-2.5 text-sm font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a951] focus-visible:ring-offset-2 after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#c8a951] after:transition-transform after:duration-200 hover:after:scale-x-100 ${hasLightBackground ? 'text-[#17243a] hover:text-[#9b7728]' : 'text-white hover:text-[#e6c76b]'}`}
                                 >
                                     {item.name}
                                 </Link>
